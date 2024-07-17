@@ -1,0 +1,142 @@
+/* Video Upload Form Styles */
+.video-upload-form {
+    display: none;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    z-index: 1002;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    padding-top: 50px; /* Add padding to create space for the close arrow */
+    font-family: 'Roboto', sans-serif; /* Update font for the entire form */
+}
+
+.video-upload-form .thin-line {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 10px 0;
+}
+
+.video-upload-form .form-header {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.video-upload-form .form-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.video-upload-form .form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    position: relative;
+}
+
+.video-upload-form .filter-button,
+.video-upload-form .preview-button {
+    display: inline-block;
+    padding: 12px 24px; /* Increased padding for larger buttons */
+    background-color: #d7d7d7;
+    color: #000000;
+    border: none;
+    border-radius: 8px; /* More rounded corners for modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-size: 16px; /* Larger font for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-upload-form .filter-button:hover,
+.video-upload-form .preview-button:hover {
+    background-color: #bbbbbb;
+    transform: translateY(-2px);
+}
+
+.video-upload-form .form-control {
+    width: 100%;
+    padding: 12px;
+    border: none; /* Removed border */
+    border-radius: 4px; /* Subtle rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; /* Adjusted font size for consistency */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for input fields */
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-upload-form .form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.awesome-line {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6200ea;
+    transition: width 0.3s ease;
+}
+
+.form-group:focus-within .awesome-line {
+    width: 100%; /* Line grows to full width on focus */
+}
+
+#closeVideoUploadForm {
+    color: #000000;
+    font-size: 1.8em; /* Slightly larger for better visibility */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1003;
+    transition: color 0.3s ease;
+}
+
+#closeVideoUploadForm:hover {
+    color: #666666;
+}
+
+/* Enhancements for video and thumbnail display sections */
+#videoDisplaySection,
+#thumbnailDisplaySection {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#uploadedVideo,
+#chosenThumbnail {
+    border: 2px solid #cccccc; /* Added border for better definition */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .video-upload-form {
+        width: 100vw;
+        height: 100vh;
+    }
+    .video-upload-form .filter-button,
+    .video-upload-form .preview-button {
+        padding: 10px 20px; /* Slightly reduced padding for small screens */
+        font-size: 14px; /* Slightly smaller font for small screens */
+    }
+}
